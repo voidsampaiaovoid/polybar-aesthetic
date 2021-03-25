@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 15 \
+CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 16 \
   "alpine" "" \
   "arch" "" \
   "centos" "" \
@@ -21,6 +21,7 @@ CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 15 \
   "sabayon" "" \
   "slackware" "" \
   "suse" "" \
+  "netbsd" "" \
   "ubuntu" "" 3>&1 1>&2 2>&3)
 
 if [ -z "$CHOICE" ]; then
