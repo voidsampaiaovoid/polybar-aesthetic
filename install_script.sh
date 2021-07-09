@@ -1,6 +1,9 @@
 #!/bin/bash
 
-CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 16 \
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+echo $DIR
+
+CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 15 \
   "alpine" "" \
   "arch" "" \
   "centos" "" \
@@ -21,9 +24,7 @@ CHOICE=$(whiptail --menu "choose a theme for your polybar" 25 65 16 \
   "sabayon" "" \
   "slackware" "" \
   "suse" "" \
-  "netbsd" "" \
   "ubuntu" "" 3>&1 1>&2 2>&3)
-
 if [ -z "$CHOICE" ]; then
   echo "you canceled"
 else
@@ -37,4 +38,5 @@ else
 ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝
 EOF
 } && cp -r ~/polybar-aesthetic/$CHOICE/* ~/.config/polybar/ && echo "polybar aesthetic finished the installation"
+} && cp -r $DIR/$CHOICE/* ~/.config/polybar/ && echo "polybar aesthetic finished the installation"
 fi
