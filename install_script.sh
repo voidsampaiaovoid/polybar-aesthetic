@@ -37,6 +37,5 @@ else
 ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║    ██║  ██║███████╗███████║   ██║   ██║  ██║███████╗   ██║   ╚██████╗
 ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝
 EOF
-} && mkdir ~/.config/polybar && cp -r ~/polybar-aesthetic/$CHOICE/* ~/.config/polybar/ && echo "polybar aesthetic finished the installation"
-} && cp -r $DIR/$CHOICE/* ~/.config/polybar/ && echo "polybar aesthetic finished the installation"
+} && mkdir ~/.config/polybar && cp -r $DIR/$CHOICE/* ~/.config/polybar/ && echo "polybar aesthetic finished the installation"
 fi
